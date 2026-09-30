@@ -1967,19 +1967,26 @@ body.light-theme #theme-toggle .moon-icon {
 .focus-pill {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border-tint);
-    padding: 6px 12px;
+    padding: 7px 12px;
     border-radius: var(--border-radius-sm);
     font-size: 0.85rem;
     color: var(--text-secondary);
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 7px;
+    flex: 1 1 calc(33.333% - 10px);
+    min-width: 210px;
+    max-width: calc(50% - 5px);
+    box-sizing: border-box;
+    white-space: nowrap;
+    transition: var(--transition-fast);
 }
 
 .focus-pill i {
     width: 14px;
     height: 14px;
     color: #10b981;
+    flex-shrink: 0;
 }
 
 /* --- Contact Section --- */
@@ -2580,7 +2587,24 @@ body.light-theme #theme-toggle .moon-icon {
         align-items: flex-start;
     }
 
+    .focus-pill {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 170px;
+        max-width: 100%;
+    }
+
     .modal-container {
         padding: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .focus-pill {
+        flex: 1 1 auto;
+        min-width: max-content;
+        max-width: 100%;
+        padding: 7px 12px;
+        font-size: 0.82rem;
+        white-space: nowrap;
     }
 }
