@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kowshik Kailash | Computer Science & Design | Portfolio</title>
+    <meta name="description" content="Personal portfolio of Kowshik Kailash - Computer Science & Design Student, Full-Stack Developer, and AI & UI/UX Enthusiast. Explore practical projects including AgriConnect and Friday AI Assistant.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-outline" id="cursor-outline" aria-hidden="true"></div>
+
+    <!-- Particle Canvas Background -->
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Header Navigation -->
+    <header class="glass-nav" role="banner">
+        <div class="nav-container">
+            <a href="#hero" class="logo" aria-label="Kowshik Kailash Portfolio Home">
+                <span class="logo-accent">&lt;</span>Kowshik<span class="logo-accent">.K /&gt;</span>
+            </a>
+            <nav class="nav-links" aria-label="Main Navigation">
+                <a href="#hero" class="nav-item active-link"><i data-lucide="home"></i><span>Home</span></a>
+                <a href="#about" class="nav-item"><i data-lucide="user"></i><span>About</span></a>
+                <a href="#what-i-do" class="nav-item"><i data-lucide="sparkles"></i><span>What I Do</span></a>
+                <a href="#skills" class="nav-item"><i data-lucide="code-2"></i><span>Skills</span></a>
+                <a href="#projects" class="nav-item"><i data-lucide="folder-git-2"></i><span>Projects</span></a>
+                <a href="#education" class="nav-item"><i data-lucide="graduation-cap"></i><span>Education</span></a>
+                <a href="#contact" class="nav-item"><i data-lucide="send"></i><span>Contact</span></a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://github.com/kailashkowshik000-art" class="nav-social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/kowshik-kailash-581319389" class="nav-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Light and Dark Theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation">
+        <a href="#hero" class="mobile-link"><i data-lucide="home"></i> Home</a>
+        <a href="#about" class="mobile-link"><i data-lucide="user"></i> About</a>
+        <a href="#what-i-do" class="mobile-link"><i data-lucide="sparkles"></i> What I Do</a>
+        <a href="#skills" class="mobile-link"><i data-lucide="code-2"></i> Skills</a>
+        <a href="#projects" class="mobile-link"><i data-lucide="folder-git-2"></i> Projects</a>
+        <a href="#education" class="mobile-link"><i data-lucide="graduation-cap"></i> Education</a>
+        <a href="#contact" class="mobile-link"><i data-lucide="send"></i> Contact</a>
+        <div class="mobile-nav-socials">
+            <a href="https://github.com/kailashkowshik000-art" target="_blank" rel="noopener noreferrer" class="btn btn-secondary mobile-social-btn">
+                <i data-lucide="github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/kowshik-kailash-581319389" target="_blank" rel="noopener noreferrer" class="btn btn-secondary mobile-social-btn">
+                <i data-lucide="linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="main-content" id="main-content">
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="glow-tag-container fade-in">
+                    <span class="glow-tag">
+                        <span class="ping-circle"></span>
+                        Available for Internships, Projects & Freelancing
+                    </span>
+                </div>
+                <h1 class="hero-title fade-in">
+                    Kowshik Kailash
+                </h1>
+                <div class="hero-role-wrapper fade-in">
+                    <p class="hero-role-primary">Computer Science & Design Student</p>
+                    <p class="hero-role-sub">
+                        <span id="typing-text">Full-Stack Developer</span><span class="typing-cursor">|</span>
+                    </p>
+                </div>
+                <p class="hero-description fade-in">
+                    "I build practical digital products by combining full-stack development, AI and thoughtful user experience."
+                </p>
+                <div class="hero-cta fade-in">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Contact Me</span>
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+                <div class="hero-social-links fade-in">
+                    <a href="https://github.com/kailashkowshik000-art" target="_blank" rel="noopener noreferrer" class="hero-social-pill" aria-label="GitHub Profile">
+                        <i data-lucide="github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kowshik-kailash-581319389" target="_blank" rel="noopener noreferrer" class="hero-social-pill" aria-label="LinkedIn Profile">
+                        <i data-lucide="linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:kailashkowshik000@gmail.com" class="hero-social-pill" aria-label="Email Me">
+                        <i data-lucide="mail"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Interactive Visual -->
+            <div class="hero-visual fade-in" aria-hidden="true">
+                <div class="hero-card-container">
+                    <div class="hero-blob blob-1"></div>
+                    <div class="hero-blob blob-2"></div>
+                    <div class="hero-profile-card glass-card">
+                        <div class="card-glow"></div>
+                        <div class="dev-card-header">
+                            <div class="dev-avatar">
+                                <span class="dev-initials">KK</span>
+                            </div>
+                            <div class="dev-meta">
+                                <h3>Kowshik Kailash</h3>
+                                <p class="dev-title">CS & Design Student</p>
+                            </div>
+                            <span class="dev-status-badge">
+                                <span class="status-dot"></span> Active
+                            </span>
+                        </div>
+
+                        <div class="dev-card-body">
+                            <div class="code-preview-box">
+                                <div class="code-header">
+                                    <div class="code-dots">
+                                        <span class="code-dot red"></span>
+                                        <span class="code-dot yellow"></span>
+                                        <span class="code-dot green"></span>
+                                    </div>
+                                    <span class="code-filename">kowshik.config.js</span>
+                                </div>
+                                <pre class="code-content"><code><span class="token-keyword">const</span> developer = {
+  name: <span class="token-string">"Kowshik Kailash"</span>,
+  institution: <span class="token-string">"Atria Institute of Tech"</span>,
+  semester: <span class="token-number">4</span>,
+  degree: <span class="token-string">"B.E. Computer Science & Design"</span>,
+  focus: [<span class="token-string">"Full-Stack"</span>, <span class="token-string">"AI/ML"</span>, <span class="token-string">"UI/UX"</span>],
+  openForWork: <span class="token-boolean">true</span>
+};</code></pre>
+                            </div>
+
+                            <div class="quick-tags-grid">
+                                <div class="quick-tag">
+                                    <i data-lucide="layers"></i>
+                                    <span>React & Node.js</span>
+                                </div>
+                                <div class="quick-tag">
+                                    <i data-lucide="bot"></i>
+                                    <span>Gemini AI Integration</span>
+                                </div>
+                                <div class="quick-tag">
+                                    <i data-lucide="palette"></i>
+                                    <span>Modern UI/UX</span>
+                                </div>
+                                <div class="quick-tag">
+                                    <i data-lucide="map-pin"></i>
+                                    <span>Bengaluru, India</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-down-hint">
+                <span>Scroll to Explore</span>
+                <i data-lucide="chevrons-down" class="bounce-anim"></i>
+            </div>
+        </section>
+
+        <!-- 2. About Section -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-subtitle">Profile & Background</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            
+            <div class="bento-grid">
+                <!-- Bento Block 1: Academic & Focus (Large) -->
+                <div class="bento-card card-lg profile-card">
+                    <div class="card-glow"></div>
+                    <div class="profile-header">
+                        <div class="avatar-ring">
+                            <div class="avatar-inner">
+                                <span class="avatar-initials">KK</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Kowshik Kailash</h3>
+                            <p class="role-caption">B.E. Computer Science & Design • 4th Semester</p>
+                            <p class="college-caption"><i data-lucide="building"></i> Atria Institute of Technology, Bengaluru</p>
+                        </div>
+                    </div>
+                    <p class="profile-bio">
+                        I am a Computer Science and Design student interested in building practical digital products using full-stack development, AI and modern UI/UX.
+                    </p>
+                    <p class="profile-bio">
+                        My approach pairs strategic logic and problem-solving with thoughtful, modern design. I focus on creating user-centered web applications that solve practical real-world problems and bridge the gap between engineering efficiency and aesthetic user interfaces.
+                    </p>
+                </div>
+
+                <!-- Bento Block 2: Location & Timezone (Medium) -->
+                <div class="bento-card card-md clock-card">
+                    <div class="card-glow"></div>
+                    <h3>Location & Availability</h3>
+                    <div class="clock-display">
+                        <div class="clock-icon" aria-hidden="true">
+                            <div class="clock-hand clock-hour" id="clock-hour"></div>
+                            <div class="clock-hand clock-minute" id="clock-minute"></div>
+                            <div class="clock-hand clock-second" id="clock-second"></div>
+                        </div>
+                        <div class="clock-text">
+                            <p class="clock-timezone"><i data-lucide="map-pin" class="inline-icon"></i> Bengaluru, Karnataka</p>
+                            <h4 id="clock-time">00:00:00 PM</h4>
+                            <p class="clock-subtitle">India Standard Time (IST)</p>
+                        </div>
+                    </div>
+                    <div class="availability-status-box">
+                        <span class="status-indicator-dot"></span>
+                        <span>Open for internships, projects & freelancing opportunities</span>
+                    </div>
+                </div>
+
+                <!-- Bento Block 3: Core Interests Cloud (Medium) -->
+                <div class="bento-card card-md interests-card">
+                    <div class="card-glow"></div>
+                    <h3>Key Areas of Interest</h3>
+                    <div class="interests-list">
+                        <div class="interest-item">
+                            <div class="interest-icon"><i data-lucide="code"></i></div>
+                            <div class="interest-text">
+                                <strong>Full Stack Development</strong>
+                                <span>Building scalable web apps across frontend and backend</span>
+                            </div>
+                        </div>
+                        <div class="interest-item">
+                            <div class="interest-icon"><i data-lucide="layout"></i></div>
+                            <div class="interest-text">
+                                <strong>UI/UX & Animation</strong>
+                                <span>Designing clean interfaces and fluid interactions</span>
+                            </div>
+                        </div>
+                        <div class="interest-item">
+                            <div class="interest-icon"><i data-lucide="cpu"></i></div>
+                            <div class="interest-text">
+                                <strong>AI/ML Integration</strong>
+                                <span>Implementing AI APIs & conversational agents</span>
+                            </div>
+                        </div>
+                        <div class="interest-item">
+                            <div class="interest-icon"><i data-lucide="compass"></i></div>
+                            <div class="interest-text">
+                                <strong>Problem Solving & Tech Exploration</strong>
+                                <span>Tackling challenges and learning emerging tools</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Block 4: Practical Philosophy (Medium) -->
+                <div class="bento-card card-md philosophy-card">
+                    <div class="card-glow"></div>
+                    <h3>Engineering Philosophy</h3>
+                    <blockquote class="phil-quote">
+                        "Great software marries robust logic with thoughtful visual design. I build practical, reliable tools that make everyday tasks simpler and more intuitive."
+                    </blockquote>
+                    <div class="philosophy-principles">
+                        <span class="principle-badge"><i data-lucide="check-circle-2"></i> Practical Value</span>
+                        <span class="principle-badge"><i data-lucide="check-circle-2"></i> Clean Architecture</span>
+                        <span class="principle-badge"><i data-lucide="check-circle-2"></i> Continuous Learning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. What I Do Section -->
+        <section id="what-i-do" class="what-i-do-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-subtitle">Core Capabilities</span>
+                <h2 class="section-title">What I Do</h2>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="service-icon-box">
+                        <i data-lucide="laptop-2"></i>
+                    </div>
+                    <h3>Full-Stack Development</h3>
+                    <p>Building responsive frontend and backend applications with modern JavaScript frameworks, secure RESTful APIs, and reliable database structures.</p>
+                    <ul class="service-points">
+                        <li><i data-lucide="check"></i> Responsive React frontend applications</li>
+                        <li><i data-lucide="check"></i> Node.js backend services & REST APIs</li>
+                        <li><i data-lucide="check"></i> Relational & document database integration</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="service-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="service-icon-box">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating clean, intuitive and responsive interfaces with strong visual hierarchy, accessible contrast, and smooth interactive micro-animations.</p>
+                    <ul class="service-points">
+                        <li><i data-lucide="check"></i> User-centered UI wireframing & prototyping</li>
+                        <li><i data-lucide="check"></i> Mobile-first, responsive layouts</li>
+                        <li><i data-lucide="check"></i> Accessible design & modern typography</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="service-icon-box">
+                        <i data-lucide="bot"></i>
+                    </div>
+                    <h3>AI Application Development</h3>
+                    <p>Building applications using AI APIs and conversational interfaces, integrating LLM capabilities to augment user productivity and solve specific tasks.</p>
+                    <ul class="service-points">
+                        <li><i data-lucide="check"></i> Gemini AI API integration</li>
+                        <li><i data-lucide="check"></i> Conversational assistants & voice triggers</li>
+                        <li><i data-lucide="check"></i> Smart text processing & automated tooling</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="service-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="service-icon-box">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <h3>Product Development</h3>
+                    <p>Turning ideas into practical digital products, from initial concept and UI prototyping to functional full-stack deployment and real user utility.</p>
+                    <ul class="service-points">
+                        <li><i data-lucide="check"></i> Feature roadmap & requirements definition</li>
+                        <li><i data-lucide="check"></i> End-to-end prototype to production MVP</li>
+                        <li><i data-lucide="check"></i> Iterative enhancements based on user needs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Skills Section -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-subtitle">Technical Stack</span>
+                <h2 class="section-title">Skills & Competencies</h2>
+            </div>
+
+            <div class="skills-grid-container">
+                <!-- Group 1: Development -->
+                <div class="skills-category-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="category-header">
+                        <div class="category-icon-box dev-accent">
+                            <i data-lucide="code-2"></i>
+                        </div>
+                        <div>
+                            <h3>Development</h3>
+                            <p class="category-desc">Core languages, frontend frameworks & backend runtimes</p>
+                        </div>
+                    </div>
+                    <div class="skill-pills-wrap">
+                        <span class="skill-pill"><i data-lucide="file-code"></i> HTML</span>
+                        <span class="skill-pill"><i data-lucide="file-text"></i> CSS</span>
+                        <span class="skill-pill"><i data-lucide="terminal"></i> JavaScript</span>
+                        <span class="skill-pill"><i data-lucide="atom"></i> React</span>
+                        <span class="skill-pill"><i data-lucide="server"></i> Node.js</span>
+                        <span class="skill-pill"><i data-lucide="binary"></i> C</span>
+                        <span class="skill-pill"><i data-lucide="cpu"></i> Python</span>
+                        <span class="skill-pill"><i data-lucide="database"></i> SQL</span>
+                    </div>
+                </div>
+
+                <!-- Group 2: AI & Backend -->
+                <div class="skills-category-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="category-header">
+                        <div class="category-icon-box ai-accent">
+                            <i data-lucide="bot"></i>
+                        </div>
+                        <div>
+                            <h3>AI & Backend</h3>
+                            <p class="category-desc">API integrations, data structures & intelligent services</p>
+                        </div>
+                    </div>
+                    <div class="skill-pills-wrap">
+                        <span class="skill-pill"><i data-lucide="sparkles"></i> Gemini API</span>
+                        <span class="skill-pill"><i data-lucide="network"></i> REST APIs</span>
+                        <span class="skill-pill"><i data-lucide="hard-drive"></i> Database Integration</span>
+                        <span class="skill-pill"><i data-lucide="cpu"></i> AI Application Development</span>
+                    </div>
+                </div>
+
+                <!-- Group 3: Design -->
+                <div class="skills-category-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="category-header">
+                        <div class="category-icon-box design-accent">
+                            <i data-lucide="palette"></i>
+                        </div>
+                        <div>
+                            <h3>Design</h3>
+                            <p class="category-desc">Human-computer interaction & responsive interface design</p>
+                        </div>
+                    </div>
+                    <div class="skill-pills-wrap">
+                        <span class="skill-pill"><i data-lucide="layout"></i> UI/UX Design</span>
+                        <span class="skill-pill"><i data-lucide="smartphone"></i> Responsive Web Design</span>
+                        <span class="skill-pill"><i data-lucide="mouse-pointer-click"></i> Interaction Design</span>
+                        <span class="skill-pill"><i data-lucide="layers"></i> Prototyping</span>
+                    </div>
+                </div>
+
+                <!-- Group 4: Tools -->
+                <div class="skills-category-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="category-header">
+                        <div class="category-icon-box tools-accent">
+                            <i data-lucide="wrench"></i>
+                        </div>
+                        <div>
+                            <h3>Tools & Environment</h3>
+                            <p class="category-desc">Version control, editors & modern developer tooling</p>
+                        </div>
+                    </div>
+                    <div class="skill-pills-wrap">
+                        <span class="skill-pill"><i data-lucide="git-branch"></i> Git</span>
+                        <span class="skill-pill"><i data-lucide="github"></i> GitHub</span>
+                        <span class="skill-pill"><i data-lucide="monitor"></i> VS Code</span>
+                        <span class="skill-pill"><i data-lucide="orbit"></i> Antigravity</span>
+                        <span class="skill-pill"><i data-lucide="code"></i> OpenCode</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Featured Projects Section -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-subtitle">Portfolio Showcase</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-intro">Practical full-stack web applications and AI tools built with modern engineering practices.</p>
+            </div>
+
+            <div class="projects-container">
+                <!-- FEATURED PROJECT 1: AgriConnect -->
+                <article class="featured-project-card glass-card" data-project="agriconnect">
+                    <div class="card-glow"></div>
+                    <div class="project-visual-side tech-pattern-agri">
+                        <div class="project-mockup-frame">
+                            <div class="mockup-header-bar">
+                                <span class="mockup-dot red"></span>
+                                <span class="mockup-dot yellow"></span>
+                                <span class="mockup-dot green"></span>
+                                <span class="mockup-url">agriconnect.platform</span>
+                            </div>
+                            <div class="mockup-screen-content">
+                                <div class="mockup-top-banner">
+                                    <div class="mandi-live-badge"><i data-lucide="leaf"></i> AgriConnect Mandi Live</div>
+                                    <span class="mockup-chip"><i data-lucide="cloud-sun"></i> 28°C Weather Sync</span>
+                                </div>
+                                <div class="mockup-filters-row">
+                                    <div class="mockup-filter-box">State: Karnataka</div>
+                                    <div class="mockup-filter-box">Mandi: Bengaluru</div>
+                                    <div class="mockup-filter-box">Crop: Wheat Grade-A</div>
+                                </div>
+                                <div class="mockup-trading-split">
+                                    <div class="mockup-trade-pane buy-pane">
+                                        <span class="pane-title">BUY SECTION</span>
+                                        <span class="price-val">₹2,450 / Quintal</span>
+                                        <span class="status-tag">Verified Mandi Price</span>
+                                    </div>
+                                    <div class="mockup-trade-pane sell-pane">
+                                        <span class="pane-title">SELL SECTION</span>
+                                        <span class="price-val">Qty: 50 Qtl</span>
+                                        <span class="status-tag active">Expected: ₹2,500</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-badge-featured">Featured Project</div>
+                    </div>
+
+                    <div class="project-content-side">
+                        <div class="project-meta-row">
+                            <span class="project-category-tag">Full-Stack / AI-ready Agriculture Platform</span>
+                        </div>
+                        <h3 class="project-heading">AgriConnect</h3>
+                        <p class="project-summary">
+                            "AgriConnect is a farmer-focused digital platform designed to make agricultural market information and crop trading easier to access."
+                        </p>
+
+                        <div class="project-key-highlights">
+                            <h4 class="highlights-title">Core System Features</h4>
+                            <div class="highlights-grid">
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Market price information</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> State & district selection</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> City & Mandi selection</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Crop, variety & grade selection</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Live weather information</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Buy & Sell trading sections</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Quantity & expected price management</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Image upload & responsive UI</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack-row">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">APIs</span>
+                            <span class="tech-tag">Database</span>
+                            <span class="tech-tag">Responsive UI/UX</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button type="button" class="btn btn-primary open-project-modal" data-target="agriconnect">
+                                <span>View Project Details</span>
+                                <i data-lucide="maximize-2"></i>
+                            </button>
+                            <a href="https://github.com/kailashkowshik000-art" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                <i data-lucide="github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FEATURED PROJECT 2: Friday AI Assistant -->
+                <article class="featured-project-card glass-card" data-project="friday-ai">
+                    <div class="card-glow"></div>
+                    <div class="project-visual-side tech-pattern-ai">
+                        <div class="project-mockup-frame">
+                            <div class="mockup-header-bar">
+                                <span class="mockup-dot red"></span>
+                                <span class="mockup-dot yellow"></span>
+                                <span class="mockup-dot green"></span>
+                                <span class="mockup-url">friday.ai.assistant</span>
+                            </div>
+                            <div class="mockup-screen-content">
+                                <div class="mockup-top-banner">
+                                    <div class="ai-active-badge"><i data-lucide="bot"></i> Friday AI Assistant</div>
+                                    <span class="mockup-chip"><i data-lucide="mic"></i> Voice Engine Active</span>
+                                </div>
+                                <div class="mockup-chat-preview">
+                                    <div class="chat-msg user-msg">
+                                        <span>"Summarize today's priority tasks and schedule a reminder."</span>
+                                    </div>
+                                    <div class="chat-msg ai-msg">
+                                        <div class="ai-avatar-tiny"><i data-lucide="sparkles"></i></div>
+                                        <span>"Identified 2 notes and scheduled your 4:00 PM review. Ready for voice input."</span>
+                                    </div>
+                                </div>
+                                <div class="mockup-productivity-pills">
+                                    <span class="prod-pill"><i data-lucide="file-text"></i> Smart Notes</span>
+                                    <span class="prod-pill"><i data-lucide="bell"></i> Timers & Reminders</span>
+                                    <span class="prod-pill"><i data-lucide="sliders"></i> Settings</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-badge-featured">Featured Project</div>
+                    </div>
+
+                    <div class="project-content-side">
+                        <div class="project-meta-row">
+                            <span class="project-category-tag">AI Assistant / Productivity Application</span>
+                        </div>
+                        <h3 class="project-heading">Friday AI Assistant</h3>
+                        <p class="project-summary">
+                            "Friday is an AI-powered personal assistant designed to combine conversational AI, voice interaction and productivity tools in one application."
+                        </p>
+
+                        <div class="project-key-highlights">
+                            <h4 class="highlights-title">Core System Features</h4>
+                            <div class="highlights-grid">
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Conversational AI chat</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Voice interaction engine</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Quick notes management</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Task & reminder scheduler</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Custom AI productivity tools</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Personal preferences & settings</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Gemini AI integration</div>
+                                <div class="highlight-chip"><i data-lucide="check-circle"></i> Local settings & data handling</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack-row">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Gemini AI</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button type="button" class="btn btn-primary open-project-modal" data-target="friday-ai">
+                                <span>View Project Details</span>
+                                <i data-lucide="maximize-2"></i>
+                            </button>
+                            <a href="https://github.com/kailashkowshik000-art" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                <i data-lucide="github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJECT 3: Car Showcase (Smaller than the 2 featured) -->
+                <div class="compact-project-container">
+                    <article class="compact-project-card glass-card" data-project="car-showcase">
+                        <div class="card-glow"></div>
+                        <div class="compact-visual tech-pattern-car">
+                            <div class="car-badge-icon">
+                                <i data-lucide="car"></i>
+                            </div>
+                            <span class="compact-tag">Web Application</span>
+                        </div>
+                        <div class="compact-content">
+                            <div class="compact-header">
+                                <h3>Car Showcase</h3>
+                                <div class="compact-links">
+                                    <button type="button" class="project-link-icon open-project-modal" data-target="car-showcase" aria-label="Inspect Car Showcase Details">
+                                        <i data-lucide="maximize-2"></i>
+                                    </button>
+                                    <a href="https://github.com/kailashkowshik000-art" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="GitHub Repository">
+                                        <i data-lucide="github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="compact-desc">
+                                "A responsive car showcase application built to present cars and their details through an interactive web interface."
+                            </p>
+                            <div class="compact-features">
+                                <span><i data-lucide="check"></i> Interactive car catalog</span>
+                                <span><i data-lucide="check"></i> Specification overview</span>
+                                <span><i data-lucide="check"></i> Responsive web interface</span>
+                            </div>
+                            <div class="tech-stack-row compact-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Node.js</span>
+                            </div>
+                            <div class="compact-footer-action">
+                                <button type="button" class="btn btn-secondary btn-sm open-project-modal" data-target="car-showcase">
+                                    <span>View Details</span>
+                                    <i data-lucide="arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Education Section -->
+        <section id="education" class="education-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-subtitle">Academic Journey</span>
+                <h2 class="section-title">Education</h2>
+            </div>
+
+            <div class="education-card-wrapper">
+                <div class="education-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="edu-top-row">
+                        <div class="edu-institution-box">
+                            <div class="edu-icon-circle">
+                                <i data-lucide="graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3 class="institution-name">Atria Institute of Technology</h3>
+                                <p class="institution-location"><i data-lucide="map-pin"></i> Bengaluru, Karnataka, India</p>
+                            </div>
+                        </div>
+                        <div class="edu-status-badge">
+                            <i data-lucide="clock"></i>
+                            <span>Currently in 4th Semester</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-degree-details">
+                        <h4 class="degree-title">Bachelor of Engineering (B.E.)</h4>
+                        <p class="degree-branch">Computer Science & Design</p>
+                    </div>
+
+                    <div class="edu-focus-areas">
+                        <h5>Academic Focus & Practical Exploration:</h5>
+                        <div class="focus-tags">
+                            <span class="focus-pill"><i data-lucide="check"></i> Data Structures & Algorithms</span>
+                            <span class="focus-pill"><i data-lucide="check"></i> Object-Oriented Programming (C / Python)</span>
+                            <span class="focus-pill"><i data-lucide="check"></i> Database Management Systems (SQL)</span>
+                            <span class="focus-pill"><i data-lucide="check"></i> UI/UX Design Fundamentals</span>
+                            <span class="focus-pill"><i data-lucide="check"></i> Web Systems & Full-Stack Development</span>
+                            <span class="focus-pill"><i data-lucide="check"></i> AI Principles & Practical Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Let's Build Something Together</h2>
+                <p class="section-intro">"Have an idea, project or opportunity? I'd be happy to connect."</p>
+            </div>
+
+            <div class="contact-layout">
+                <!-- Contact Direct Deck -->
+                <div class="contact-info-deck glass-card">
+                    <div class="card-glow"></div>
+                    <h3>Direct Channels</h3>
+                    <p>Whether you have a full-stack internship opportunity, freelance inquiry, or project idea, feel free to reach out directly through any of these platforms:</p>
+                    
+                    <div class="contact-channels">
+                        <!-- Email -->
+                        <div class="channel-item">
+                            <div class="channel-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="channel-details">
+                                <span class="channel-label">Email Address</span>
+                                <a href="mailto:kailashkowshik000@gmail.com" class="channel-link">kailashkowshik000@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="channel-item">
+                            <div class="channel-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="channel-details">
+                                <span class="channel-label">Phone</span>
+                                <a href="tel:7019714108" class="channel-link">+91 7019714108</a>
+                            </div>
+                        </div>
+
+                        <!-- LinkedIn -->
+                        <div class="channel-item">
+                            <div class="channel-icon">
+                                <i data-lucide="linkedin"></i>
+                            </div>
+                            <div class="channel-details">
+                                <span class="channel-label">LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/kowshik-kailash-581319389" target="_blank" rel="noopener noreferrer" class="channel-link">
+                                    linkedin.com/in/kowshik-kailash-581319389
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="channel-item">
+                            <div class="channel-icon">
+                                <i data-lucide="github"></i>
+                            </div>
+                            <div class="channel-details">
+                                <span class="channel-label">GitHub</span>
+                                <a href="https://github.com/kailashkowshik000-art" target="_blank" rel="noopener noreferrer" class="channel-link">
+                                    github.com/kailashkowshik000-art
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container glass-card">
+                    <div class="card-glow"></div>
+                    <h3>Send a Message</h3>
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="input-wrapper">
+                                <input type="text" id="form-name" name="name" required placeholder=" " autocomplete="name">
+                                <label for="form-name">Your Full Name *</label>
+                                <span class="input-focus-glow"></span>
+                                <span class="field-error" id="name-error"></span>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="email" id="form-email" name="email" required placeholder=" " autocomplete="email">
+                                <label for="form-email">Your Email Address *</label>
+                                <span class="input-focus-glow"></span>
+                                <span class="field-error" id="email-error"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="input-wrapper">
+                            <input type="text" id="form-subject" name="subject" required placeholder=" " autocomplete="off">
+                            <label for="form-subject">Subject *</label>
+                            <span class="input-focus-glow"></span>
+                            <span class="field-error" id="subject-error"></span>
+                        </div>
+
+                        <div class="input-wrapper text-area-wrapper">
+                            <textarea id="form-message" name="message" required placeholder=" " rows="5"></textarea>
+                            <label for="form-message">Your Message *</label>
+                            <span class="input-focus-glow"></span>
+                            <span class="field-error" id="message-error"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+
+                    <!-- Real status message container -->
+                    <div id="form-status-msg" class="form-status-box" role="alert" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8. Project Details Modal -->
+    <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title" aria-hidden="true">
+        <div class="modal-container glass-card">
+            <button class="modal-close" id="modal-close-btn" aria-label="Close Project Details Dialog">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal-content-wrapper">
+                <div class="modal-header">
+                    <span class="project-tag" id="modal-project-tag">Full-Stack Platform</span>
+                    <h3 id="modal-project-title">Project Name</h3>
+                </div>
+                
+                <div class="modal-body">
+                    <!-- Left: Graphic / Architecture Visual Preview -->
+                    <div class="modal-graphics-container" id="modal-graphics-container">
+                        <div class="modal-visual-frame" id="modal-visual-frame">
+                            <!-- Injected dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Right: In-depth Technical Specs -->
+                    <div class="modal-text-details">
+                        <div class="modal-section-block">
+                            <h4>Overview</h4>
+                            <p id="modal-project-desc"></p>
+                        </div>
+
+                        <div class="modal-section-block">
+                            <h4>Problem It Solves</h4>
+                            <p id="modal-project-problem"></p>
+                        </div>
+
+                        <div class="modal-section-block">
+                            <h4>Key Features</h4>
+                            <ul id="modal-project-features" class="modal-bullet-list"></ul>
+                        </div>
+
+                        <div class="modal-section-block">
+                            <h4>Technologies Used</h4>
+                            <div id="modal-project-tech" class="tech-stack-row"></div>
+                        </div>
+
+                        <div class="modal-section-block">
+                            <h4>My Contribution</h4>
+                            <p id="modal-project-contribution"></p>
+                        </div>
+
+                        <div class="modal-section-block">
+                            <h4>Future Improvements</h4>
+                            <ul id="modal-project-improvements" class="modal-bullet-list"></ul>
+                        </div>
+
+                        <div class="modal-footer-actions">
+                            <a href="#" id="modal-github-link" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                                <i data-lucide="github"></i> <span>View Code Repository</span>
+                            </a>
+                            <a href="#contact" id="modal-contact-link" class="btn btn-primary">
+                                <i data-lucide="mail"></i> <span>Discuss This Project</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <p class="footer-name"><strong>Kowshik Kailash</strong></p>
+                <p class="footer-dept">Computer Science & Design • Atria Institute of Technology, Bengaluru</p>
+            </div>
+            
+            <div class="footer-social-links">
+                <a href="https://github.com/kailashkowshik000-art" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                    <i data-lucide="github"></i> <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/kowshik-kailash-581319389" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                    <i data-lucide="linkedin"></i> <span>LinkedIn</span>
+                </a>
+                <a href="mailto:kailashkowshik000@gmail.com" aria-label="Email Me">
+                    <i data-lucide="mail"></i> <span>Email</span>
+                </a>
+            </div>
+
+            <div class="footer-bottom-row">
+                <p class="copyright-text">&copy; 2026 Kowshik Kailash. All rights reserved.</p>
+                <a href="#hero" class="back-to-top"><i data-lucide="arrow-up"></i> Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Controller Script -->
+    <script src="script.js"></script>
+</body>
+</html>
